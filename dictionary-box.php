@@ -4,7 +4,7 @@
 Plugin Name: Dictionary Box
 Plugin URI: http://www.dictionarybox.com
 Description: Provides an internal dictionary on the footer of your pages.
-Version: 1.0.0
+Version: 1.0
 Author: Ugur Catak
 Author URI: http://www.dictionarybox.com
 License: GPL2
