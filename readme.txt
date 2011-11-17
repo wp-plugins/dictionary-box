@@ -28,7 +28,7 @@ Please rate the plugin if you find it useful, thank you.
 
 = I have Installed the plugin but nothing is showing up on my site? =
 
-Please check your Wordpress theme, all themes must have <?php wp_footer(); ?> function. This is a WordPress theme development standart. See how to fix this: http://www.youtube.com/watch?v=h59sy3tUQrc
+Please check your Wordpress theme, all themes must have php wp_footer() function. This is a WordPress theme development standart. See how to fix this: http://www.youtube.com/watch?v=h59sy3tUQrc
 
 http://www.dictionarybox.com/feedback.html
 
