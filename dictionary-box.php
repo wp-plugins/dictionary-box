@@ -44,13 +44,7 @@ function dictionary_box_styles() {
 	global $wp_version;
 	global $stimuli_dictionary_box_plugin_prefix;
     $pl_dbox_styles_prefix = ($stimuli_dictionary_box_plugin_prefix."css/");
-
-	$pl_dbox_styles = "<script type=\"text/javascript\">
-//<![CDATA[
-document.write('<link rel=\"stylesheet\" href=\"".$pl_dbox_styles_prefix."dictionary-box-style.css\" type=\"text/css\" media=\"screen\" />');
-//]]>
-</script>\n";
-	echo($pl_dbox_styles);
+	wp_enqueue_style('dictbox', $pl_dbox_styles_prefix.'dictionary-box-style.css', false, '1.0', 'all');  
 }
 
 function elvis_enter_the_building() {
@@ -165,7 +159,7 @@ add_action('deactivate_dictionary-box/dictionary-box.php', 'dictionary_box_unins
 /* END CODE uninstalling the plugin and deleting the plugin options */
 
 /* we want to add the above xhtml to the header of our pages: */
-add_action('wp_head', 'dictionary_box_styles');
+add_action('get_header', 'dictionary_box_styles'); 
 add_action('wp_enqueue_scripts', 'elvis_enter_the_building');
 add_action('wp_enqueue_scripts', 'dictionary_box_scripts');
 add_action('admin_menu', 'dictionary_box_options_page');
