@@ -52,6 +52,7 @@ if (e.keyCode == 13) {
 
 function dboxCursorLoc(){
 var txt = document.getElementById('pl-dbox-search-field');
+//$('#pl-dbox-search-field').focus(); 
  if (txt.createTextRange) {  
        //IE  
        var FieldRange = txt.createTextRange();  
@@ -60,9 +61,9 @@ var txt = document.getElementById('pl-dbox-search-field');
        FieldRange.select();  
        }  
       else {  
-       //Firefox and Opera  
-       txt.focus();  
+       //Firefox, Chrome, Opera
+       if (!Boolean(window.chrome)){txt.focus();}
        var length = txt.value.length;  
-       txt.setSelectionRange(length, length);  
-      }  
+       txt.setSelectionRange(length, length);
+      }    
 }
