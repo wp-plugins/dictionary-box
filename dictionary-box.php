@@ -84,11 +84,12 @@ function dictionary_box_html(){
 		if(trim($dictionary_box_subheading) == "")	$dictionary_box_subheading = "English Spanish Dictionary";
 		
 		$flag1= substr($dictionary_box_glossary,0,strpos($dictionary_box_glossary,"To"));
-		$source1 = getSource($flag1);
+		$flag1_style = getSource($flag1);
+		$flag1_style = "<a $flag1_style</a>";
 		if (strpos($dictionary_box_glossary,",")){
 			$flag2= substr($dictionary_box_glossary, strlen($flag1)+2, strpos($dictionary_box_glossary,",")- strlen($flag1)-2);
-			$source2 = getSource($flag2);
-			$flag2_style= "<a style=\"background:url('http://dictionarybox.com/flags/$flag2.png') 0 1px no-repeat;\" $source2</a>";}
+			$flag2_style = getSource($flag2);
+			$flag2_style = "<a $flag2_style</a>";}
 		else{
 			$flag2_style= "";
 		}	
@@ -99,7 +100,8 @@ function dictionary_box_html(){
 		<div id=\"pl-dbox\" style=\"right:$dictionary_box_margin_right"."px\">
 		<a class=\"pl-dbox-title\" href=\"javascript:void(0);dboxCursorLoc();\"><span id=\"pl-dbox-title-text\">$dictionary_box_title</span></a>
 		<div id=\"pl-dbox-content\">
-			<div id=\"pl-dboxFlags\"><ul><li><a style=\"background:url('http://dictionarybox.com/flags/$flag1.png') 0 1px no-repeat;\" $source1</a></li> <li>$flag2_style</li><li><h3>$dictionary_box_subheading</h3></li></ul></div>
+			<div id=\"pl-dboxFlags\"><ul><li>$flag1_style</li>
+			<li>$flag2_style</li><li><h3>$dictionary_box_subheading</h3></li></ul></div>
 			<div id=\"pl-dbox-ajax-content\">
 			<p class=\"info\">Double click on any word on the page or type a word:</p>
 			<p><input type=\"text\" name=\"pl-dbox-search-field\" style=\"width:97%;\" value=\"\" id=\"pl-dbox-search-field\" onKeyPress=\"return dbxChkKy(event);\" autocomplete=off /></p>
@@ -116,17 +118,18 @@ function dictionary_box_html(){
 }
 
 function getSource($flag){
-if($flag=="Turkish") $source="href=\"http://nedir.dictionarist.com/\" onclick=\"return false;\">sözlük";
-elseif($flag=="Spanish") $source="href=\"http://definicion.dictionarist.com/\" onclick=\"return false;\">diccionario";
-elseif($flag=="Russian") $source="href=\"http://ru.dictionarist.com/\" onclick=\"return false;\">словарь";
-elseif($flag=="French") $source="href=\"http://definition.dictionarist.com/\" onclick=\"return false;\">dictionnaire";
-elseif($flag=="Italian") $source="href=\"http://traduzione.dictionarist.com/\" onclick=\"return false;\">dizionario";
-elseif($flag=="German") $source="href=\"http://was.dictionarist.com/\" onclick=\"return false;\">wörterbuch";
-elseif($flag=="Portuguese") $source="href=\"http://oque.dictionarist.com/\" onclick=\"return false;\">dicionário";
-else $source="href=\"http://www.dictionarist.com/\" onclick=\"return false;\">dictionary";
+if($flag=="Turkish") $source="onclick=\"return false;\" href=\"http://nedir.dictionarist.com/\"><img src=\"http://dictionarybox.com/flags/".$flag.".png\" alt=\"sözlük\" />";
+elseif($flag=="Spanish") $source="onclick=\"return false;\" href=\"http://definicion.dictionarist.com/\"><img src=\"http://dictionarybox.com/flags/".$flag.".png\" alt=\"diccionario\" />";
+elseif($flag=="Russian") $source="onclick=\"return false;\" href=\"http://ru.dictionarist.com/\"><img src=\"http://dictionarybox.com/flags/".$flag.".png\" alt=\"словарь\" />";
+elseif($flag=="French") $source="onclick=\"return false;\" href=\"http://definition.dictionarist.com/\"><img src=\"http://dictionarybox.com/flags/".$flag.".png\" alt=\"dictionnaire\" />";
+elseif($flag=="Italian") $source="onclick=\"return false;\" href=\"http://traduzione.dictionarist.com/\"><img src=\"http://dictionarybox.com/flags/".$flag.".png\" alt=\"dizionario\" />";
+elseif($flag=="German") $source="onclick=\"return false;\" href=\"http://was.dictionarist.com/\"><img src=\"http://dictionarybox.com/flags/".$flag.".png\" alt=\"wörterbuch\" />";
+elseif($flag=="Portuguese") $source="onclick=\"return false;\" href=\"http://oque.dictionarist.com/\"><img src=\"http://dictionarybox.com/flags/".$flag.".png\" alt=\"dicionário\" />";
+else $source="onclick=\"return false;\" href=\"http://www.dictionarist.com/\"><img src=\"http://dictionarybox.com/flags/".$flag.".png\" alt=\"dictionary\" />";
 
 return $source;
 }
+
 /* START CODE installing the plugin and adding the plugin options */
 function dictionary_box_install()
 { 
