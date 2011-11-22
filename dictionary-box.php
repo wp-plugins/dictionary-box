@@ -118,14 +118,14 @@ function dictionary_box_html(){
 }
 
 function getSource($flag){
-if($flag=="Turkish") $source="onclick=\"return false;\" href=\"http://nedir.dictionarist.com/\"><img src=\"http://dictionarybox.com/flags/".$flag.".png\" alt=\"sözlük\" />";
-elseif($flag=="Spanish") $source="onclick=\"return false;\" href=\"http://definicion.dictionarist.com/\"><img src=\"http://dictionarybox.com/flags/".$flag.".png\" alt=\"diccionario\" />";
-elseif($flag=="Russian") $source="onclick=\"return false;\" href=\"http://ru.dictionarist.com/\"><img src=\"http://dictionarybox.com/flags/".$flag.".png\" alt=\"словарь\" />";
-elseif($flag=="French") $source="onclick=\"return false;\" href=\"http://definition.dictionarist.com/\"><img src=\"http://dictionarybox.com/flags/".$flag.".png\" alt=\"dictionnaire\" />";
-elseif($flag=="Italian") $source="onclick=\"return false;\" href=\"http://traduzione.dictionarist.com/\"><img src=\"http://dictionarybox.com/flags/".$flag.".png\" alt=\"dizionario\" />";
-elseif($flag=="German") $source="onclick=\"return false;\" href=\"http://was.dictionarist.com/\"><img src=\"http://dictionarybox.com/flags/".$flag.".png\" alt=\"wörterbuch\" />";
-elseif($flag=="Portuguese") $source="onclick=\"return false;\" href=\"http://oque.dictionarist.com/\"><img src=\"http://dictionarybox.com/flags/".$flag.".png\" alt=\"dicionário\" />";
-else $source="onclick=\"return false;\" href=\"http://www.dictionarist.com/\"><img src=\"http://dictionarybox.com/flags/".$flag.".png\" alt=\"dictionary\" />";
+if($flag=="Turkish") $source="href=\"http://nedir.dictionarist.com/\"><img src=\"http://dictionarybox.com/flags/".$flag.".png\" alt=\"sözlük\" />";
+elseif($flag=="Spanish") $source="href=\"http://definicion.dictionarist.com/\"><img src=\"http://dictionarybox.com/flags/".$flag.".png\" alt=\"diccionario\" />";
+elseif($flag=="Russian") $source="href=\"http://ru.dictionarist.com/\"><img src=\"http://dictionarybox.com/flags/".$flag.".png\" alt=\"словарь\" />";
+elseif($flag=="French") $source="href=\"http://definition.dictionarist.com/\"><img src=\"http://dictionarybox.com/flags/".$flag.".png\" alt=\"dictionnaire\" />";
+elseif($flag=="Italian") $source="href=\"http://traduzione.dictionarist.com/\"><img src=\"http://dictionarybox.com/flags/".$flag.".png\" alt=\"dizionario\" />";
+elseif($flag=="German") $source="href=\"http://was.dictionarist.com/\"><img src=\"http://dictionarybox.com/flags/".$flag.".png\" alt=\"wörterbuch\" />";
+elseif($flag=="Portuguese") $source="href=\"http://oque.dictionarist.com/\"><img src=\"http://dictionarybox.com/flags/".$flag.".png\" alt=\"dicionário\" />";
+else $source="href=\"http://www.dictionarist.com/\"><img src=\"http://dictionarybox.com/flags/".$flag.".png\" alt=\"dictionary\" />";
 
 return $source;
 }
