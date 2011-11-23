@@ -1,7 +1,7 @@
 === Plugin Name ===
 Contributors: ugurcatak
 Donate link: http://www.dictionarybox.com/donate.html
-Tags: dictionary, translator, glossary, lexicon, thesaurus, english, spanish, italian, german, french, portuguese, chinese, japanese, korean, turkish, russian, plugin, multilingual, language
+Tags: dictionary, translator, translation, translate, glossary, lexicon, thesaurus, definitions, words, english, spanish, dutch, italian, german, french, portuguese, greek, chinese, japanese, korean, turkish, russian, plugin, multilingual, language, vocabullary, tooltips
 Requires at least: 2.0.2
 Tested up to: 3.2
 Stable tag: 1.0
@@ -11,7 +11,8 @@ Provides an internal double click dictionary on the footer of your pages.
 == Description ==
 
 
-http://www.dictionarybox.com
+
+[Click here for quick demo page](http://www.dictionarybox.com/) 
 
 Dictionary Box provides an internal dictionary on the footer of your pages with double click functionality and audio pronounce. Dictionary Box does not open a new page to display results, the visitors stay at your website.
 
