@@ -85,11 +85,11 @@ function dictionary_box_html(){
 		
 		$flag1= substr($dictionary_box_glossary,0,strpos($dictionary_box_glossary,"To"));
 		$flag1_style = getSource($flag1);
-		$flag1_style = "<a $flag1_style</a>";
+		$flag1_style = "$flag1_style";
 		if (strpos($dictionary_box_glossary,",")){
 			$flag2= substr($dictionary_box_glossary, strlen($flag1)+2, strpos($dictionary_box_glossary,",")- strlen($flag1)-2);
 			$flag2_style = getSource($flag2);
-			$flag2_style = "<a $flag2_style</a>";}
+			$flag2_style = "$flag2_style";}
 		else{
 			$flag2_style= "";
 		}	
@@ -118,14 +118,14 @@ function dictionary_box_html(){
 }
 
 function getSource($flag){
-if($flag=="Turkish") $source="href=\"http://nedir.dictionarist.com/\"><img src=\"http://dictionarybox.com/flags/".$flag.".png\" alt=\"sözlük\" />";
-elseif($flag=="Spanish") $source="href=\"http://definicion.dictionarist.com/\"><img src=\"http://dictionarybox.com/flags/".$flag.".png\" alt=\"diccionario\" />";
-elseif($flag=="Russian") $source="href=\"http://ru.dictionarist.com/\"><img src=\"http://dictionarybox.com/flags/".$flag.".png\" alt=\"словарь\" />";
-elseif($flag=="French") $source="href=\"http://definition.dictionarist.com/\"><img src=\"http://dictionarybox.com/flags/".$flag.".png\" alt=\"dictionnaire\" />";
-elseif($flag=="Italian") $source="href=\"http://traduzione.dictionarist.com/\"><img src=\"http://dictionarybox.com/flags/".$flag.".png\" alt=\"dizionario\" />";
-elseif($flag=="German") $source="href=\"http://was.dictionarist.com/\"><img src=\"http://dictionarybox.com/flags/".$flag.".png\" alt=\"wörterbuch\" />";
-elseif($flag=="Portuguese") $source="href=\"http://oque.dictionarist.com/\"><img src=\"http://dictionarybox.com/flags/".$flag.".png\" alt=\"dicionário\" />";
-else $source="href=\"http://www.dictionarist.com/\"><img src=\"http://dictionarybox.com/flags/".$flag.".png\" alt=\"dictionary\" />";
+if($flag=="Turkish") $source="<img src=\"http://dictionarybox.com/flags/".$flag.".png\" alt=\"sözlük\" />";
+elseif($flag=="Spanish") $source="<img src=\"http://dictionarybox.com/flags/".$flag.".png\" alt=\"diccionario\" />";
+elseif($flag=="Russian") $source="<img src=\"http://dictionarybox.com/flags/".$flag.".png\" alt=\"словарь\" />";
+elseif($flag=="French") $source="<img src=\"http://dictionarybox.com/flags/".$flag.".png\" alt=\"dictionnaire\" />";
+elseif($flag=="Italian") $source="<img src=\"http://dictionarybox.com/flags/".$flag.".png\" alt=\"dizionario\" />";
+elseif($flag=="German") $source="<img src=\"http://dictionarybox.com/flags/".$flag.".png\" alt=\"wörterbuch\" />";
+elseif($flag=="Portuguese") $source="<img src=\"http://dictionarybox.com/flags/".$flag.".png\" alt=\"dicionário\" />";
+else $source="<img src=\"http://dictionarybox.com/flags/".$flag.".png\" alt=\"dictionary\" />";
 
 return $source;
 }
