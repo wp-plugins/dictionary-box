@@ -25,6 +25,7 @@ div#pl-dbox-content.open{-webkit-box-shadow:0 0 8px rgba(0,0,0,0.5);-moz-box-sha
 #pl-dbox #pl-dbox-content #pl-dboxFlags {white-space:nowrap;}
 #pl-dbox #pl-dbox-content #pl-dboxFlags a{display:block;width:16px;cursor:default;margin:1px 3px 0 0;text-decoration:none;border:none;outline:0;padding:0;}
 #pl-dbox #pl-dbox-content #pl-dboxFlags a img{display:block;width:16px;cursor:default;margin:1px 3px 0 0;border:none;outline:0;padding:0;}
+#pl-dbox #pl-dbox-content #pl-dboxFlags img{display:block;width:16px;cursor:default;margin:1px 3px 0 0;border:none;outline:0;padding:0;}
 #pl-dbox h3, #pl-dbox #pl-dbox-content #pl-dboxFlags h3{padding:0;line-height:normal;letter-spacing:normal; font-size:15px;color:#fff; margin:0 0 .5em 0 !important;font-family:"Helvetica Neue", Helvetica, Arial, sans-serif;font-weight:300;text-shadow:0 1px 0 #333;text-align:left;text-decoration:none;}
 #pl-dbox #pl-dbox-content #pl-dbox-ajax-content{font-family:"Helvetica Neue", Helvetica, Arial, sans-serif;font-size:13px;height:200px;text-align:left;}
 #pl-dbox #pl-dbox-content #pl-dbox-ajax-content #pl-dbox-scroller{margin-top:5px;height:150px;overflow:auto;}
